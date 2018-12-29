@@ -1,0 +1,40 @@
+.inline-textfield {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  outline: none;
+  border: 0;
+  max-width: 100%;
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  background: transparent;
+  white-space: pre-line;
+  text-overflow: ellipsis;
+  line-height: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  border-bottom: 1px solid #333;
+}
+.inline-textfield:hover {
+  /* text-decoration: underline;
+  text-decoration-color: rgba(51, 51, 51, 0.5); */
+
+  border-bottom: 1.5px solid rgba(51, 51, 51, 0.301);
+}
+.inline-textfield::placeholder {
+  color: #666;
+}
+.inline-textfield:empty::before {
+  color: #333;
+  content: attr(data-placeholder);
+}
+.inline-textfield-disabled {
+  cursor: not-allowed;
+}
+.inline-textfield-error {
+  border-bottom: 1px solid #f00;
+}

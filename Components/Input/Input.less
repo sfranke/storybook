@@ -1,0 +1,43 @@
+.inline-textfield {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    outline: none;
+    border: 0;
+    max-width: 100%;
+    width: 100%;
+    resize: none;
+    overflow: hidden;
+    background: transparent;
+    white-space: pre-line;
+    text-overflow: ellipsis;
+    line-height: inherit;
+    text-align: inherit;
+    text-transform: inherit;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: #00f;
+    }
+
+    &::placeholder {
+        color: #333;
+    }
+
+    // eslint-disable-next-line selector-pseudo-element-colon-notation
+    &:empty::before {
+        color: #333;
+        content: attr(data-placeholder);
+    }
+
+    &-disabled {
+        cursor: default;
+    }
+
+    &-error {
+        border-bottom: 1px solid #f00;
+    }
+}
