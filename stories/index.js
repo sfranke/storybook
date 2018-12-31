@@ -11,6 +11,8 @@ import '../Components/Input/Input.css';
 import Avatar from '../Components/Avatar/Avatar.jsx';
 import '../Components/Avatar/Avatar.css';
 
+import man2 from './man.svg';
+
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
@@ -39,12 +41,12 @@ storiesOf('Input Field', module)
     />
   );
 
-// storiesOf('Avatar', module)
-//   .add('Default', () => <Avatar
-//         imageSource={'./assets/man.svg'}
-//     />
-//   )
-//   .add('Default2', () => <Avatar
-//         imageSource={'./Components/Avatar/assets/man2.svg'}
-//     />
-//   );
+storiesOf('Avatar', module)
+  .add('Default', () => <Avatar
+        imageSource={''}
+    />
+  )
+  .add('Default2', () => <Avatar
+        imageSource={man}
+    />
+  );

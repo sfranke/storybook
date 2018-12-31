@@ -3,28 +3,22 @@ import React, {
 } from 'react';
 import PropTypes from 'prop-types';
 
-export default class Avatar extends React.Component {
+export default class Avatar extends React.PureComponent {
     static propTypes = {
-        imageSource: PropTypes.string,
+        imageSource: PropTypes.string.isRequired,
     }
-
-    static defaultProps = {
-        imageSource: './assets/man.svg'
-    }
-
 
     getStyles = () => {
         const { imageSource } = this.props;
         if (!imageSource) return {};
-        console.log(imageSource);
         return {
-            backgroundImage: `url(${imageSource})`,
+            backgroundImage: `url('${imageSource}')`,
         };
     }
 
     render() {
         return (
-            <div className={'avatar'} styles={this.getStyles()} />
+            <div className={'avatar'} style={this.getStyles()} />
         );
     }
 }
