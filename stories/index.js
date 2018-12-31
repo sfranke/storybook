@@ -11,7 +11,7 @@ import '../Components/Input/Input.css';
 import Avatar from '../Components/Avatar/Avatar.jsx';
 import '../Components/Avatar/Avatar.css';
 
-import man2 from './man.svg';
+import man from './man.svg';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
