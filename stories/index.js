@@ -46,7 +46,22 @@ storiesOf('Avatar', module)
         imageSource={''}
     />
   )
-  .add('Default2', () => <Avatar
+  .add('Custom URL', () => <Avatar
         imageSource={man}
+    />
+  )
+  .add('Avatar SMALL', () => <Avatar
+        imageSource={man}
+        size={'small'}
+    />
+  )
+  .add('Avatar MEDIUM', () => <Avatar
+        imageSource={man}
+        size={'medium'}
+    />
+  )
+  .add('Avatar LARGE', () => <Avatar
+        imageSource={man}
+        size={'large'}
     />
   );

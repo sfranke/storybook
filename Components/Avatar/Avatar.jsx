@@ -6,6 +6,11 @@ import PropTypes from 'prop-types';
 export default class Avatar extends React.PureComponent {
     static propTypes = {
         imageSource: PropTypes.string.isRequired,
+        size: PropTypes.string,
+    }
+
+    static defaultProps = {
+        size: 'medium',
     }
 
     getStyles = () => {
@@ -18,7 +23,7 @@ export default class Avatar extends React.PureComponent {
 
     render() {
         return (
-            <div className={'avatar'} style={this.getStyles()} />
+            <div className={`avatar-${this.props.size}`} style={this.getStyles()} />
         );
     }
 }
